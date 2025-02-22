@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initButtonEffects();
     initParticles();
     initMouseTrail();
+    initProductAnimations();
+    initApproachAnimations();
 });
 
 // Testimonial Carousel Functionality
@@ -108,12 +110,12 @@ function initButtonEffects() {
 // Helper Functions
 function updateThumbnailsActiveState(thumbnails, activeIndex) {
     thumbnails.forEach((thumbnail, index) => {
-        if (index === activeIndex) {
-            thumbnail.classList.add('active');
-        } else {
-            thumbnail.classList.remove('active');
-        }
-    });
+                if (index === activeIndex) {
+                    thumbnail.classList.add('active');
+                } else {
+                    thumbnail.classList.remove('active');
+                }
+            });
 }
 
 function handleCardTilt(e) {
@@ -272,4 +274,170 @@ function onScroll() {
 }
 
 // Add scroll event listener
-window.addEventListener('scroll', onScroll); 
+window.addEventListener('scroll', onScroll);
+
+// Initialize product animations and interactions
+function initProductAnimations() {
+    const productCards = document.querySelectorAll('.product-card');
+    const viewMoreBtn = document.querySelector('.view-more-btn');
+    const indicators = document.querySelectorAll('.indicator-dot');
+    let currentPage = 0;
+    
+    // Product card animations
+    productCards.forEach((card, index) => {
+        // Add staggered animation delay
+        card.style.animationDelay = `${index * 0.2}s`;
+        
+        // Add hover effect
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            // Calculate rotation based on mouse position
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = (y - centerY) / 20;
+            const rotateY = (centerX - x) / 20;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+        });
+        
+        // View details button effect
+        const previewBtn = card.querySelector('.preview-btn');
+        if (previewBtn) {
+            previewBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                showProductDetails(card);
+            });
+        }
+        
+        // Learn more button effect
+        const learnMoreBtn = card.querySelector('.product-btn');
+        if (learnMoreBtn) {
+            learnMoreBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                createRippleEffect.call(learnMoreBtn, e);
+                showProductDetails(card);
+            });
+        }
+    });
+
+    // View More button animation
+    if (viewMoreBtn) {
+        viewMoreBtn.addEventListener('click', () => {
+            currentPage = (currentPage + 1) % 3;
+            updateIndicators(currentPage);
+            animateViewMore();
+        });
+
+        viewMoreBtn.addEventListener('mouseenter', () => {
+            viewMoreBtn.querySelector('i').style.transform = 'translateX(5px)';
+        });
+
+        viewMoreBtn.addEventListener('mouseleave', () => {
+            viewMoreBtn.querySelector('i').style.transform = 'translateX(0)';
+        });
+    }
+
+    // Initialize indicators
+    function updateIndicators(activePage) {
+        indicators.forEach((dot, index) => {
+            if (index === activePage) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    // Animate view more section
+    function animateViewMore() {
+        const container = document.querySelector('.view-more-container');
+        container.style.transform = 'translateY(10px)';
+        setTimeout(() => {
+            container.style.transform = 'translateY(0)';
+        }, 300);
+    }
+
+    // Show product details
+    function showProductDetails(card) {
+        const productTitle = card.querySelector('h3').textContent;
+        const productDesc = card.querySelector('p').textContent;
+        const features = Array.from(card.querySelectorAll('.product-features span'))
+            .map(span => span.textContent.trim())
+            .join('\n- ');
+
+        // You can replace this with a modal or custom display
+        alert(`${productTitle}\n\n${productDesc}\n\nFeatures:\n- ${features}`);
+    }
+
+    // Animate features on scroll
+    const features = document.querySelectorAll('.product-features span');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateX(0)';
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    features.forEach((feature, index) => {
+        feature.style.opacity = '0';
+        feature.style.transform = 'translateX(-20px)';
+        feature.style.transition = `all 0.3s ease ${index * 0.1}s`;
+        observer.observe(feature);
+    });
+}
+
+// Initialize approach section animations
+function initApproachAnimations() {
+    const approachCards = document.querySelectorAll('.approach-card');
+    
+    // Add staggered animation delay to cards
+    approachCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.2}s`;
+        
+        // Add hover effect
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            // Calculate rotation based on mouse position
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = (y - centerY) / 30;
+            const rotateY = (centerX - x) / 30;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
+
+    // Add scroll-based animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.2 });
+
+    approachCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'all 0.6s ease';
+        observer.observe(card);
+    });
+} 
