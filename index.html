@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Teams</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Logopipsum</div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">How it Works</a></li>
+                <li><a href="#">Hire</a></li>
+            </ul>
+        </nav>
+        <button class="contact-btn">Contact us</button>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Great <span class="highlight">software</span> is <br> <strong>built by great <span
+                            class="highlight">teams</span></strong></h1>
+                <p>We help build and manage a team of world-class developers to bring your vision to life.</p>
+                <button class="cta-btn">Let's get started!</button>
+            </div>
+            <div class="hero-image">
+                <img src="/assets/illustration.png" alt="Developer illustration">
+            </div>
+            <div class="bottom-circle"></div>
+        </section>
+    </main>
+
+    <section class="services-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Services we offer</h2>
+
+            <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators custom-indicators">
+                    <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row" style="padding: 20px;">
+                            <div class="col-md-4">
+                                <div class="service-card">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                                    </svg>
+                                    <h4>Web Development</h4>
+                                    <p>A Website is an extension of yourself and we can help you to express it properly.
+                                        Your website is your number one marketing asset because we live in a digital
+                                        age.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="service-card">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                        <path
+                                            d="M12 2a10 10 0 0110 10c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z" />
+                                        <path d="M12 6v6l4 2" />
+                                    </svg>
+                                    <h4>Mobile App Development</h4>
+                                    <p>Transform your business idea into a powerful mobile application that reaches your
+                                        customers wherever they are.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="service-card">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                        <path d="M20 7h-9m9 4h-9m9 4h-9M7 7v10m0-10L4 8.5m3-1.5l3 1.5" />
+                                    </svg>
+                                    <h4>Software Testing</h4>
+                                    <p>Ensure your software meets the highest quality standards with our comprehensive
+                                        testing services.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row" style="padding: 20px;">
+                            <div class="col-md-4">
+                                <div class="service-card">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                        <path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M13 12H3" />
+                                    </svg>
+                                    <h4>UI/UX Design</h4>
+                                    <p>Create intuitive and engaging user experiences that keep your customers coming
+                                        back for more.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="service-card">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                                    </svg>
+                                    <h4>Digital Marketing</h4>
+                                    <p>Boost your online presence with our comprehensive digital marketing solutions.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="service-card">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                        <path d="M4 6h16M4 12h16M4 18h16" />
+                                    </svg>
+                                    <h4>Cloud Services</h4>
+                                    <p>Leverage the power of cloud computing to scale your business efficiently.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row" style="padding: 20px;">
+                            <div class="col-md-4">
+                                <div class="service-card">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                        <path
+                                            d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                    </svg>
+                                    <h4>AI & Machine Learning</h4>
+                                    <p>Implement cutting-edge AI solutions to automate processes and gain valuable
+                                        insights from your data.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="service-card">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                        <path
+                                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17" />
+                                    </svg>
+                                    <h4>DevOps Services</h4>
+                                    <p>Streamline your development and operations with our modern DevOps practices and
+                                        tools.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="service-card">
+                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                        <path
+                                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                    </svg>
+                                    <h4>Cybersecurity</h4>
+                                    <p>Protect your digital assets with our comprehensive security solutions and best
+                                        practices.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="section-container">
+        <!-- Decorative Circles -->
+        <div class="circle circle-top"></div>
+        <div class="circle circle-bottom"></div>
+
+        <div class="content-wrapper">
+            <div class="text-content">
+                <div class="purple-line"></div>
+                <h2 class="main-heading">Leading companies trust us</h2>
+                <h3 class="sub-heading">to develop software</h3>
+                <p class="description">We <span class="pink-text">add development capacity</span> to tech teams. Our
+                    value isn't limited to building teams but is equally distributed across the project lifecycle. We
+                    are a custom software development company that guarantees the successful delivery of your project.
+                </p>
+                <a href="#" class="see-more">
+                    See more Informations
+                    <svg class="see-more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+            <div class="image-container">
+                <img src="/api/placeholder/600/400" alt="Team working together" class="feature-image">
+                <div class="play-button">
+                    <svg class="play-button-icon" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <button class="nav-button" onclick="previousSlide()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button class="nav-button" onclick="nextSlide()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+    </section>
+    <section class="testimonials-section">
+        <div class="container text-center">
+            <h2 class="section-title">
+                Why customers love
+                <span class="title-emphasis">working with us</span>
+            </h2>
+
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonial-content">
+                            <div class="testimonial-text">
+                                Their creative approach and attention to detail made our project stand out. The team was
+                                responsive and delivered exceptional results on time.
+                            </div>
+                            <div class="testimonial-author">
+                                <h4 class="author-name">John Smith</h4>
+                                <p class="author-company">Tech Solutions Inc</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional testimonials -->
+                    <div class="carousel-item">
+                        <div class="testimonial-content">
+                            <div class="testimonial-text">
+                                Without any doubt I recommend Alcaline Solutions as one of the best web design and
+                                digital marketing agencies. One of the best agencies I've came across so far.
+                            </div>
+                            <div class="testimonial-author">
+                                <h4 class="author-name">Romeena De Silva</h4>
+                                <p class="author-company">Janet Cosmetics</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation arrows -->
+                <button class="carousel-control-prev custom-control" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next custom-control" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+
+                <!-- Testimonial authors thumbnails -->
+                <div class="testimonial-authors">
+                    <img src="/assets/author1.jpg" alt="Author 1" class="author-thumbnail active"
+                        data-bs-target="#testimonialCarousel" data-bs-slide-to="0">
+                    <img src="/assets/author2.jpg" alt="Author 2" class="author-thumbnail"
+                        data-bs-target="#testimonialCarousel" data-bs-slide-to="1">
+                    <img src="/assets/author3.jpg" alt="Author 3" class="author-thumbnail"
+                        data-bs-target="#testimonialCarousel" data-bs-slide-to="2">
+                    <img src="/assets/author4.jpg" alt="Author 4" class="author-thumbnail"
+                        data-bs-target="#testimonialCarousel" data-bs-slide-to="3">
+                    <img src="/assets/author5.jpg" alt="Author 5" class="author-thumbnail"
+                        data-bs-target="#testimonialCarousel" data-bs-slide-to="4">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="case-studies">
+        <div class="container">
+            <div class="case-studies-header">
+                <h2>Our recent</h2>
+                <h3>Case studies</h3>
+            </div>
+
+            <div class="case-studies-grid">
+                <!-- Case Study 1 -->
+                <div class="case-study-card" style="background-color: #F0FFF7;">
+                    <div class="case-study-images">
+                        <div class="device-mockups">
+                            <img src="/assets/Case-study__image (1).png" alt="Login Screen" class="device-img">
+                        </div>
+                    </div>
+                    <div class="case-study-content">
+                        <h4>Website Design for SCFC Canada</h4>
+                        <p>Built with a clean, a simple website reflecting the core values of the organization. Simple to use, highly functional, and a breeze to navigate. We focused on creating an intuitive user experience that showcases their services effectively.</p>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="case-study-card" style="background-color: #FFF4F4;">
+                    <div class="case-study-images">
+                        <div class="device-mockups">
+                            <img src="/assets/Case-study__image (2).png" alt="Login Screen" class="device-img">
+                        </div>
+                    </div>
+                    <div class="case-study-content">
+                        <h4>Website Design for SCFC Canada</h4>
+                        <p>Built with a clean, a simple website reflecting the core values of the organization. Simple to use, highly functional, and a breeze to navigate. We focused on creating an intuitive user experience that showcases their services effectively.</p>
+                    </div>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="case-study-card" style="background-color: #F1F2FF;">
+                    <div class="case-study-images">
+                        <div class="device-mockups">
+                            <img src="/assets/Case-study__image.png" alt="Login Screen" class="device-img">
+                        </div>
+                    </div>
+                    <div class="case-study-content">
+                        <h4>Website Design for SCFC Canada</h4>
+                        <p>Built with a clean, a simple website reflecting the core values of the organization. Simple to use, highly functional, and a breeze to navigate. We focused on creating an intuitive user experience that showcases their services effectively.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-more-link">
+                <a href="#">Read more case studies →</a>
+            </div>
+        </div>
+    </section>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+
+        // Carousel functionality
+        let currentSlide = 0;
+        const totalSlides = 3; // Update this based on your total slides
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlide();
+        }
+
+        function previousSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlide();
+        }
+
+        function updateSlide() {
+            // Add your slide update logic here
+            console.log('Current slide:', currentSlide);
+        }
+
+        // Play button functionality
+        document.querySelector('.play-button').addEventListener('click', function () {
+            // Add your video play logic here
+            console.log('Play video');
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
