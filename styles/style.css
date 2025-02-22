@@ -962,3 +962,483 @@ header {
         display: none;
     }
 }
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Apply animations to elements */
+.hero-text {
+    animation: slideIn 1s ease-out;
+}
+
+.hero-image {
+    animation: scaleIn 1s ease-out;
+}
+
+.service-card {
+    animation: fadeIn 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.service-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.service-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.service-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.case-study-card {
+    animation: fadeIn 0.8s ease-out;
+    animation-fill-mode: both;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-study-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-content {
+    animation: scaleIn 0.8s ease-out;
+}
+
+.cta-btn {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    background: #ff4da6;
+}
+
+.nav-links li a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #D63384;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+.contact-btn {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    background: #ff4da6;
+    box-shadow: 0 5px 15px rgba(214, 51, 132, 0.3);
+}
+
+.service-icon {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.play-button {
+    animation: bounce 2s infinite;
+    transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: #ff4da6;
+}
+
+.author-thumbnail {
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.author-thumbnail:hover {
+    transform: scale(1.2);
+}
+
+/* Live Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(214, 51, 132, 0.4);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(214, 51, 132, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(214, 51, 132, 0);
+    }
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes shine {
+    0% {
+        background-position: -100% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(214, 51, 132, 0.3),
+                    0 0 0 1px rgba(214, 51, 132, 0.3),
+                    0 0 0 3px rgba(214, 51, 132, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 0 1px rgba(214, 51, 132, 0.3),
+                    0 0 0 3px rgba(214, 51, 132, 0.3),
+                    0 0 0 5px rgba(214, 51, 132, 0);
+    }
+}
+
+/* Apply live animations */
+.hero-image img {
+    animation: float 6s ease-in-out infinite;
+}
+
+.contact-btn {
+    animation: pulse 2s infinite;
+    transition: all 0.3s ease;
+}
+
+.bottom-circle {
+    background: linear-gradient(-45deg, #D63384, #ff4da6, #ff85c0);
+    background-size: 200% 200%;
+    animation: gradientBG 15s ease infinite;
+}
+
+.service-icon {
+    position: relative;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    background-size: 200% 100%;
+    animation: shine 3s infinite;
+}
+
+.case-study-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.case-study-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 50%);
+    transform: rotate(45deg);
+    animation: shine 6s infinite;
+    pointer-events: none;
+}
+
+.play-button {
+    animation: ripple 1.5s linear infinite;
+}
+
+.testimonial-content {
+    animation: float 8s ease-in-out infinite;
+}
+
+.rating .fas {
+    animation: pulse 2s infinite;
+}
+
+.rating .fas:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.rating .fas:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.rating .fas:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+.rating .fas:nth-child(5) {
+    animation-delay: 1.6s;
+}
+
+.section-title {
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #D63384, #ff4da6);
+    background-size: 200% 100%;
+    animation: gradientBG 3s ease infinite;
+}
+
+/* Hover pause animations */
+.hero-image:hover img {
+    animation-play-state: paused;
+}
+
+.contact-btn:hover {
+    animation-play-state: paused;
+}
+
+/* Add smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add intersection observer animations */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animated Background Styles */
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.floating-circle {
+    position: absolute;
+    background: linear-gradient(45deg, rgba(214, 51, 132, 0.1), rgba(255, 77, 166, 0.1));
+    border-radius: 50%;
+    animation: floatAround 20s linear infinite;
+}
+
+.floating-circle:nth-child(1) {
+    width: 300px;
+    height: 300px;
+    top: -150px;
+    left: -150px;
+    animation-delay: 0s;
+}
+
+.floating-circle:nth-child(2) {
+    width: 200px;
+    height: 200px;
+    top: 40%;
+    right: -100px;
+    animation-delay: -5s;
+}
+
+.floating-circle:nth-child(3) {
+    width: 150px;
+    height: 150px;
+    bottom: -75px;
+    left: 30%;
+    animation-delay: -10s;
+}
+
+.floating-circle:nth-child(4) {
+    width: 250px;
+    height: 250px;
+    top: 20%;
+    left: 20%;
+    animation-delay: -15s;
+}
+
+.floating-circle:nth-child(5) {
+    width: 180px;
+    height: 180px;
+    bottom: 20%;
+    right: 20%;
+    animation-delay: -7s;
+}
+
+@keyframes floatAround {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    25% {
+        transform: translate(100px, 100px) rotate(90deg) scale(1.1);
+    }
+    50% {
+        transform: translate(0, 200px) rotate(180deg) scale(1);
+    }
+    75% {
+        transform: translate(-100px, 100px) rotate(270deg) scale(0.9);
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg) scale(1);
+    }
+}
+
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(214, 51, 132, 0.2);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Add shimmer effect to sections */
+.section-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 50%);
+    transform: rotate(45deg);
+    animation: shimmerRotate 12s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes shimmerRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Add floating animation to specific elements */
+.service-icon, .case-study-card img, .testimonial-authors img {
+    animation: floatElement 4s ease-in-out infinite;
+}
+
+@keyframes floatElement {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Mouse trail effect */
+.mouse-trail {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: rgba(214, 51, 132, 0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: screen;
+    animation: trailFade 1s ease-out forwards;
+}
+
+@keyframes trailFade {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
