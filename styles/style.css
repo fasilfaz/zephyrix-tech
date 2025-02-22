@@ -2473,3 +2473,107 @@ html {
     margin-bottom: 10px;
   }
 }
+
+
+
+
+.contact-us {
+    padding: 50px 0;
+    background-color: #f7f7f7;
+  }
+  
+  .contact-us .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .contact-us .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .contact-us .col-md-6 {
+    flex-basis: 45%;
+  }
+  
+  .contact-us .col-lg-4 {
+    flex-basis: 30%;
+  }
+  
+  .contact-us h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-us ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact-us li {
+    margin-bottom: 10px;
+  }
+  
+  .contact-us i {
+    margin-right: 10px;
+  }
+  
+  .contact-us a {
+    color: #337ab7;
+    text-decoration: none;
+  }
+  
+  .contact-us form {
+    margin-top: 20px;
+  }
+  
+  .contact-us .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .contact-us label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .contact-us input, .contact-us textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .contact-us button[type="submit"] {
+    background-color: #337ab7;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact-us button[type="submit"]:hover {
+    background-color: #23527c;
+  }
+  
+  /* Responsive styles */
+  
+  @media (max-width: 768px) {
+    .contact-us .col-md-6 {
+      flex-basis: 100%;
+    }
+    .contact-us .col-lg-4 {
+      flex-basis: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-us .row {
+      flex-direction: column;
+    }
+    .contact-us .col-md-6, .contact-us .col-lg-4 {
+      margin-bottom: 20px;
+    }
+  }
