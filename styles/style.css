@@ -4,6 +4,8 @@ body {
     padding: 0;
     box-sizing: border-box;
     position: relative;
+    overflow-x: hidden;
+    width: 100vw;
 }
 header {
     background: white;
@@ -316,6 +318,7 @@ header {
     height: 100%;
     transition: transform 0.3s ease;
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 .service-card:hover {
@@ -631,6 +634,7 @@ header {
     color: #666;
     line-height: 1.6;
     margin-bottom: 2rem;
+    text-align: justify;
 }
 
 .pink-text {
@@ -994,6 +998,7 @@ header {
     animation: fadeIn 0.8s ease-out;
     animation-fill-mode: both;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: justify;
 }
 
 .case-study-card:hover {
@@ -1522,6 +1527,7 @@ html {
     color: #666;
     line-height: 1.6;
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 .product-features {
@@ -1772,6 +1778,7 @@ html {
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
+    text-align: justify;
 }
 
 .approach-card:hover {
@@ -2201,6 +2208,7 @@ html {
 
 .resource-content {
     padding: 25px;
+    text-align: justify;
 }
 
 .resource-tag {
@@ -2377,6 +2385,7 @@ html {
   .section-description {
     font-size: 18px;
     margin-bottom: 40px;
+    text-align: justify;
   }
   
   .subsection-title {
@@ -2388,6 +2397,7 @@ html {
   .subsection-description {
     font-size: 16px;
     margin-bottom: 20px;
+    text-align: justify;
   }
   
   .value-list {
