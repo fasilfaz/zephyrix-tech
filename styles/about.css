@@ -156,3 +156,123 @@ p {
         font-size: 2rem;
     }
 }
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+    margin-top: 2.5rem;
+}
+
+.team-member {
+    perspective: 1000px;
+}
+
+.member-card {
+    position: relative;
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.member-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.member-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, 
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.7) 50%,
+        rgba(0, 0, 0, 0) 100%);
+    padding: 2rem 1.5rem;
+    color: white;
+    transform: translateY(4rem);
+    transition: transform 0.3s ease;
+}
+
+.member-details h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+}
+
+.member-details p {
+    margin: 0.5rem 0 1rem;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: all 0.3s ease 0.1s;
+}
+
+.social-icon {
+    color: white;
+    transition: all 0.2s ease;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon:hover {
+    background: white;
+    color: #D63384;
+    transform: translateY(-2px);
+}
+
+/* Hover effects */
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.member-card:hover .member-details {
+    transform: translateY(0);
+}
+
+.member-card:hover .social-icons {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .member-img {
+        height: 280px;
+    }
+    
+    .member-details {
+        padding: 1.5rem 1rem;
+    }
+    
+    .member-details h3 {
+        font-size: 1.25rem;
+    }
+    
+    .member-details p {
+        font-size: 0.9rem;
+    }
+}
