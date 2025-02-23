@@ -2651,7 +2651,7 @@ html {
   }
   
   .contact-us button[type="submit"] {
-    background-color: #337ab7;
+    background-color: #D63384;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -2660,7 +2660,7 @@ html {
   }
   
   .contact-us button[type="submit"]:hover {
-    background-color: #23527c;
+    background-color: #eb57a1;
   }
   
   /* Responsive styles */
