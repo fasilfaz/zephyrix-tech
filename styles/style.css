@@ -22,6 +22,11 @@ header {
     z-index: 50;
     width: 100%;
 }
+
+header nav ul {
+   margin-bottom: 0px;
+}
+
 .logo {
     font-size: 1.5em;
     font-weight: bold;
@@ -2442,7 +2447,7 @@ html {
 
  .team-section {
   background-color: #f7f7f7;
-  padding: 50px 0;
+  padding: 80px 0;
 }
 
 .team-member-card {
