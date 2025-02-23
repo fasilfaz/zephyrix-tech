@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Star shape representing excellence -->
+  <path d="M12 2l2.4 7.4h7.6l-6 4.4 2.4 7.4-6-4.4-6 4.4 2.4-7.4-6-4.4h7.6z" 
+    stroke="white" 
+    fill="none" 
+    stroke-width="2"
+    stroke-linejoin="round"/>
+  <!-- Small decorative circles around star -->
+  <circle cx="12" cy="2" r="1" fill="white"/>
+  <circle cx="22" cy="9.4" r="1" fill="white"/>
+  <circle cx="2" cy="9.4" r="1" fill="white"/>
+  <circle cx="19" cy="21" r="1" fill="white"/>
+  <circle cx="5" cy="21" r="1" fill="white"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+  <!-- Shopping Cart Icon -->
+  <path d="M9 22a2 2 0 100 4 2 2 0 000-4zM20 22a2 2 0 100 4 2 2 0 000-4z" fill="currentColor"/>
+  <path d="M4 4h3l3.5 14h11l3-10H9" 
+    stroke="currentColor" 
+    fill="none" 
+    stroke-width="2" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"/>
+</svg>

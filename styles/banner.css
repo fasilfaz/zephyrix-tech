@@ -1,0 +1,58 @@
+.banner {
+    background: linear-gradient(135deg, #D63384, #9F1239);
+    padding: 120px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner p {
+    color: aliceblue;
+}
+
+.circle-decoration {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 6s ease-in-out infinite;
+}
+
+.circle-1 {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    right: -50px;
+}
+
+.circle-2 {
+    width: 150px;
+    height: 150px;
+    bottom: -30px;
+    left: -30px;
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes floatAndRotate {
+    0%, 100% { 
+        transform: translateY(0) rotate(0deg); 
+    }
+    50% { 
+        transform: translateY(-20px) rotate(10deg); 
+    }
+}
+
+.circle-top {
+    animation: floatAndRotate 6s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        padding: 80px 20px;
+    }
+}

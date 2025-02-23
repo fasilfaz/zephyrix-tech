@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+  <!-- Movie Ticket Icon -->
+  <path d="M4 10h22v10H4z" fill="none" stroke="currentColor" stroke-width="2"/>
+  <path d="M8 10v10M22 10v10" stroke="currentColor" stroke-width="2" stroke-dasharray="2,2"/>
+  <!-- Decorative circles representing perforations -->
+  <circle cx="8" cy="7" r="1" fill="currentColor"/>
+  <circle cx="8" cy="23" r="1" fill="currentColor"/>
+  <circle cx="22" cy="7" r="1" fill="currentColor"/>
+  <circle cx="22" cy="23" r="1" fill="currentColor"/>
+</svg>

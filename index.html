@@ -31,16 +31,40 @@
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#about">About us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#projects">projects</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#team">Our Team</a></li>
-                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About us</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/products.html">Products</a></li>
+                <li><a href="/projects.html">projects</a></li>
             </ul>
         </nav>
-        <a href="#contact"><button class="contact-btn">Contact us</button></a>
+        <nav class="mobile-nav">
+            <a href="index.html" class="nav-item active" data-page="index">
+                <span class="icon home-icon"></span>
+                <span>Home</span>
+            </a>
+            <a href="about.html" class="nav-item" data-page="about">
+                <span class="icon about-icon"></span>
+                <span>About</span>
+            </a>
+            <a href="services.html" class="nav-item" data-page="services">
+                <span class="icon services-icon"></span>
+                <span>Services</span>
+            </a>
+            <a href="products.html" class="nav-item" data-page="products">
+                <span class="icon products-icon"></span>
+                <span>Products</span>
+            </a>
+            <a href="projects.html" class="nav-item" data-page="projects">
+                <span class="icon projects-icon"></span>
+                <span>Projects</span>
+            </a>
+            <a href="contact.html" class="nav-item" data-page="contact">
+                <span class="icon contact-icon"></span>
+                <span>Contact</span>
+            </a>
+        </nav>
+        <a href="/contact.html"><button class="contact-btn">Contact us</button></a>
     </header>
     <main>
         <section class="hero">
@@ -55,7 +79,6 @@
             </div>
             <div class="bottom-circle"></div>
         </section>
-    </main>
 
     <section id="about" class="about-section">
         <div class="container">
@@ -972,6 +995,8 @@
           </div>
         </div>
       </section>
+      
+    </main>
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -1005,37 +1030,6 @@
             <p>&copy; 2025 Zephyrix Tech. All rights reserved.</p>
         </div>
     </footer>
-    <script>
-        function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        }
-
-
-        // Carousel functionality
-        let currentSlide = 0;
-        const totalSlides = 3; // Update this based on your total slides
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateSlide();
-        }
-
-        function previousSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateSlide();
-        }
-
-        function updateSlide() {
-            // Add your slide update logic here
-            console.log('Current slide:', currentSlide);
-        }
-
-        // Play button functionality
-        document.querySelector('.play-button').addEventListener('click', function () {
-            // Add your video play logic here
-            console.log('Play video');
-        });
-    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 </body>
 

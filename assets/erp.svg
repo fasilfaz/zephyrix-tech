@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+  <!-- ERP Icon combining gear, chart, and connections -->
+  <!-- Central Gear representing system integration -->
+  <path d="M15 8a7 7 0 100 14 7 7 0 000-14zm0 12a5 5 0 110-10 5 5 0 010 10z" fill="currentColor"/>
+  
+  <!-- Gear teeth around the circle -->
+  <path d="M15 4v3m0 16v3M26 15h-3m-16 0H4m20.5-8.5l-2 2m-13 13l-2 2m15-2l2 2m-13-15l-2-2" 
+    stroke="currentColor" 
+    stroke-width="2" 
+    stroke-linecap="round"/>
+  
+  <!-- Connection dots representing different modules -->
+  <circle cx="8" cy="8" r="1.5" fill="currentColor"/>
+  <circle cx="22" cy="8" r="1.5" fill="currentColor"/>
+  <circle cx="8" cy="22" r="1.5" fill="currentColor"/>
+  <circle cx="22" cy="22" r="1.5" fill="currentColor"/>
+  
+  <!-- Center dot -->
+  <circle cx="15" cy="15" r="2" fill="currentColor"/>
+</svg>

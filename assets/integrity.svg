@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Shield shape representing protection and trust -->
+  <path d="M12 3L4 7v5c0 5.1 3.4 9.9 8 11.3 4.6-1.4 8-6.2 8-11.3V7l-8-4z" 
+    stroke="white" 
+    fill="none" 
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+  <!-- Checkmark inside shield -->
+  <path d="M8 12l3 3 5-5" 
+    stroke="white" 
+    fill="none" 
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+</svg>
