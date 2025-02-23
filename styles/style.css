@@ -4,6 +4,9 @@ body {
     padding: 0;
     box-sizing: border-box;
     position: relative;
+}
+
+html, body {
     overflow-x: hidden;
     width: 100vw;
 }
