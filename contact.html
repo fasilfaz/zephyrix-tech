@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Zephyrix Tech</title>
+    <link rel="icon" type="image/x-icon" href="/assets/logo.jpeg">
+    <link rel="stylesheet" href="/styles/contact.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Animated Background Elements -->
+    <div class="animated-background">
+        <div class="floating-circle"></div>
+        <div class="floating-circle"></div>
+        <div class="floating-circle"></div>
+        <div class="floating-circle"></div>
+        <div class="floating-circle"></div>
+    </div>
+    <div class="particles-container"></div>
+
+    <!-- Header (Same as Homepage) -->
+    <header>
+        <div class="logo">Zephyrix</div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About us</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/products.html">Products</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+            </ul>
+        </nav>
+        <nav class="mobile-nav">
+            <a href="index.html" class="nav-item" data-page="index">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#D63384">
+                    <path
+                        d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2zm0 2.83L19.17 12h-1.67v8h-3v-6H9.5v6h-3v-8H4.83L12 4.83z" />
+                </svg>
+                <span>Home</span>
+            </a>
+            <a href="about.html" class="nav-item" data-page="about">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#D63384">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-13h-2v2h2V7zm0 4h-2v6h2v-6z" />
+                </svg>
+                <span>About</span>
+            </a>
+            <a href="contact.html" class="nav-item active" data-page="contact">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#D63384">
+                    <path
+                        d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z" />
+                </svg>
+                <span>Contact</span>
+            </a>
+            <!-- Menu Icon to Trigger Full-Screen Overlay -->
+            <div class="nav-item menu-trigger" onclick="toggleOverlayMenu(event)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#D63384">
+                    <path d="M3 4h18v2H3zm0 7h18v2H3zm0 7h18v2H3z" />
+                </svg>
+                <span>Menu</span>
+            </div>
+            
+        </nav>
+        <!-- Full-Screen Overlay Menu -->
+        <div class="overlay-menu">
+            <div class="overlay-menu-content">
+                <div class="overlay-menu-close" onclick="toggleOverlayMenu(event)">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#D63384">
+                        <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                    </svg>
+                </div>
+                <ul class="overlay-menu-links">
+                    <li><a href="index.html" class="overlay-menu-item">Home</a></li>
+                    <li><a href="about.html" class="overlay-menu-item">About</a></li>
+                    <li><a href="services.html" class="overlay-menu-item">Services</a></li>
+                    <li><a href="products.html" class="overlay-menu-item">Products</a></li>
+                    <li><a href="projects.html" class="overlay-menu-item">Projects</a></li>
+                    <li><a href="contact.html" class="overlay-menu-item">Contact</a></li>
+                    <!-- Add more items here in the future -->
+                </ul>
+            </div>
+        </div>
+        <a href="/contact.html"><button class="contact-btn">Contact us</button></a>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-header text-center">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">We'd love to hear from you! Contact us for any inquiries or collaborations.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <form id="contactForm" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Your Message" rows="6"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Our Location</h3>
+                        <p>123 Tech Street, Innovation City, TX 75001</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Us</h3>
+                        <p><a href="mailto:info@zephyrixtech.com">info@zephyrixtech.com</a></p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as Homepage) -->
+    <footer class="footer">
+        <div class="footer-wave"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>About Zephyrix</h4>
+                    <p>We are a passionate team dedicated to building innovative software solutions and empowering the
+                        next generation of tech leaders.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/services.html">Services</a></li>
+                        <li><a href="/products.html">Products</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with our latest news and offers.</p>
+                    <div class="newsletter">
+                        <form>
+                            <input type="email" placeholder="Your Email" required>
+                            <button type="submit" class="subscribe-btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Zephyrix Tech. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to toggle the overlay menu
+        function toggleOverlayMenu(event) {
+            event.stopPropagation(); // Prevent event bubbling
+            const overlayMenu = document.querySelector('.overlay-menu');
+            const body = document.body;
+
+            if (overlayMenu.classList.contains('active')) {
+                overlayMenu.classList.remove('active');
+                body.classList.remove('overlay-active');
+            } else {
+                overlayMenu.classList.add('active');
+                body.classList.add('overlay-active');
+            }
+        }
+
+        // Close overlay menu when clicking a link
+        document.querySelectorAll('.overlay-menu-item').forEach(link => {
+            link.addEventListener('click', () => {
+                const overlayMenu = document.querySelector('.overlay-menu');
+                const body = document.body;
+                overlayMenu.classList.remove('active');
+                body.classList.remove('overlay-active');
+            });
+        });
+
+        // Close overlay menu when clicking outside the menu content
+        document.addEventListener('click', function (event) {
+            const overlayMenu = document.querySelector('.overlay-menu');
+            const overlayContent = document.querySelector('.overlay-menu-content');
+            const menuTrigger = document.querySelector('.menu-trigger');
+
+            if (overlayMenu.classList.contains('active')) {
+                if (!overlayContent.contains(event.target) && !menuTrigger.contains(event.target)) {
+                    overlayMenu.classList.remove('active');
+                    document.body.classList.remove('overlay-active');
+                }
+            }
+        });
+
+        // Existing toggleMenu function for desktop (if needed)
+        function toggleMenu() {
+            const mobileNav = document.querySelector('.mobile-nav');
+            mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+
+</html>
