@@ -2945,6 +2945,9 @@ html {
     .newsletter input {
         margin-bottom: 10px;
     }
+    .footer {
+        margin-bottom: 58px;
+    }
 }
 
 @media (max-width: 480px) {
