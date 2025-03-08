@@ -31,6 +31,9 @@ header nav ul {
     font-size: 1.5em;
     font-weight: bold;
 }
+.logo span{
+    color: #D63384;
+}
 .nav-links {
     list-style: none;
     display: flex;
