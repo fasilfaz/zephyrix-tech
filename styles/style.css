@@ -2682,3 +2682,300 @@ html {
       margin-bottom: 20px;
     }
   }
+
+  @media (max-width: 768px) {
+    /* Existing styles */
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+
+    .carousel-indicators {
+        bottom: -30px;
+    }
+    
+    .carousel-indicators [data-bs-target] {
+        width: 10px;
+        height: 10px;
+    }
+
+    /* Update service-card to have a larger bottom gap */
+    .service-card {
+        margin-bottom: 2rem; /* Increased from 1rem to 2rem for more noticeable gap */
+    }
+
+    /* Ensure the carousel items have proper spacing */
+    .carousel-item .row {
+        row-gap: 2rem; /* Adds gap between rows in the carousel */
+    }
+}
+
+.footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+    color: #fff;
+    padding: 60px 0 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.footer-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23fff' fill-opacity='1' d='M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,197.3C672,213,768,235,864,229.3C960,224,1056,192,1152,181.3C1248,171,1344,181,1392,186.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: cover;
+    z-index: -1;
+    transform: translateY(-50%);
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer .col-md-4 {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease;
+}
+
+.footer .col-md-4:hover {
+    transform: translateY(-5px);
+}
+
+.footer h4 {
+    margin: 0 0 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    position: relative;
+    color: #ff4da6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer h4::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(to right, #D63384, #ff85c0);
+    animation: gradientBG 3s ease infinite;
+}
+
+.footer p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.footer a {
+    color: #ff85c0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 77, 166, 0.5);
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.footer li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #D63384;
+    transition: transform 0.3s ease;
+}
+
+.footer li:hover::before {
+    transform: translateX(5px);
+}
+
+/* Newsletter Styles */
+.newsletter {
+    margin-top: 20px;
+}
+
+.newsletter h5 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.newsletter form {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter input {
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.newsletter input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(214, 51, 132, 0.3);
+}
+
+.newsletter .subscribe-btn {
+    background: #D63384;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(214, 51, 132, 0.3);
+}
+
+.newsletter .subscribe-btn:hover {
+    background: #ff4da6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(214, 51, 132, 0.5);
+}
+
+/* Social Links Styles */
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #D63384;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 15px rgba(214, 51, 132, 0.5);
+}
+
+.copyright {
+    background: rgba(0, 0, 0, 0.3);
+    color: #ddd;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Animations */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 0;
+    }
+
+    .footer .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer .col-md-4 {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 30px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+
+    .newsletter input {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer h4 {
+        font-size: 1.5rem;
+    }
+
+    .footer p, .footer li {
+        font-size: 0.9rem;
+    }
+
+    .social-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+    }
+}
+
+/* Add floating animation to social icons */
+.social-icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+.social-icon:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.social-icon:nth-child(3) {
+    animation-delay: 1s;
+}
