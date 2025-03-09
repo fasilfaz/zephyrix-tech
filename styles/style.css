@@ -3234,3 +3234,117 @@ body.overlay-active {
         display: inline-block; /* Show contact button on desktop */
     }
 }
+/* Existing Contact Us Styles */
+.contact-us {
+    padding: 80px 0;
+    background-color: #f7f7f7;
+}
+
+.contact-us .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-us .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-us .col-md-6 {
+    flex-basis: 45%;
+}
+
+.contact-us .col-lg-4 {
+    flex-basis: 30%;
+}
+
+.contact-us h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-us form {
+    margin-top: 20px;
+}
+
+.contact-us .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-us label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact-us input,
+.contact-us textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+.contact-us button[type="submit"] {
+    background-color: #D63384;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us button[type="submit"]:hover {
+    background-color: #eb57a1;
+}
+
+/* Fix for Send Message Button Below 768px */
+@media (max-width: 768px) {
+    .contact-us .col-md-6 {
+        flex-basis: 100%;
+    }
+    .contact-us .col-lg-4 {
+        flex-basis: 100%;
+    }
+
+    /* Ensure the form button is visible and properly styled */
+    .contact-us button[type="submit"] {
+        display: block; /* Override any potential display: none */
+        width: 60%; /* Full width for better visibility */
+        margin: 0 auto; /* Center the button */
+        padding: 12px 20px; /* Slightly larger padding for touch targets */
+        font-size: 1rem; /* Readable text size */
+    }
+
+    /* Adjust form spacing */
+    .contact-us form {
+        padding: 0 15px; /* Add padding to prevent edge overlap */
+    }
+
+    .contact-us .form-group {
+        margin-bottom: 15px; /* Reduce spacing slightly for compactness */
+    }
+
+    .contact-us input,
+    .contact-us textarea {
+        margin-bottom: 15px; /* Consistent spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-us .row {
+        flex-direction: column;
+    }
+    .contact-us .col-md-6,
+    .contact-us .col-lg-4 {
+        margin-bottom: 20px;
+    }
+
+    /* Further adjustments for very small screens */
+    .contact-us button[type="submit"] {
+        padding: 10px 15px; /* Slightly smaller padding */
+        font-size: 0.9rem; /* Slightly smaller text */
+    }
+}
+
