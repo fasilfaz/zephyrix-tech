@@ -1,7 +1,25 @@
+:root {
+    --background-start: #fff;
+    --background-end: #f8f9fa;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --card-background: white;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    --accent-primary: #D63384;
+    --accent-hover: #ff4da6;
+    --accent-light: rgba(214, 51, 132, 0.1);
+    --accent-shadow: rgba(214, 51, 132, 0.3);
+    --accent-shadow-hover: rgba(214, 51, 132, 0.5);
+    --input-border: #eee;
+    --input-background: #f8f9fa;
+    --white: white;
+    --shimmer: rgba(255, 255, 255, 0.1);
+}
+
 /* Contact Section Styles */
 .contact-section {
     padding: 100px 0;
-    background: linear-gradient(to bottom, #fff, #f8f9fa);
+    background: linear-gradient(to bottom, var(--background-start), var(--background-end));
     position: relative;
     overflow: hidden;
 }
@@ -11,7 +29,7 @@
 }
 
 .section-subtitle {
-    color: #666;
+    color: var(--text-secondary);
     font-size: 1.1rem;
     margin-top: 15px;
 }
@@ -23,10 +41,10 @@
 }
 
 .contact-form {
-    background: white;
+    background: var(--card-background);
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px var(--shadow-light);
     transition: transform 0.3s ease;
 }
 
@@ -41,7 +59,7 @@
 .form-group label {
     display: block;
     font-size: 1.1rem;
-    color: #333;
+    color: var(--text-primary);
     margin-bottom: 8px;
     font-weight: 500;
 }
@@ -50,20 +68,20 @@
 .form-group textarea {
     width: 100%;
     padding: 12px 15px;
-    border: 2px solid #eee;
+    border: 2px solid var(--input-border);
     border-radius: 8px;
     font-size: 1rem;
-    color: #333;
-    background: #f8f9fa;
+    color: var(--text-primary);
+    background: var(--input-background);
     transition: all 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #D63384;
-    background: #fff;
+    border-color: var(--accent-primary);
+    background: var(--white);
     outline: none;
-    box-shadow: 0 0 10px rgba(214, 51, 132, 0.1);
+    box-shadow: 0 0 10px var(--accent-light);
 }
 
 .form-group textarea {
@@ -72,8 +90,8 @@
 }
 
 .submit-btn {
-    background: #D63384;
-    color: white;
+    background: var(--accent-primary);
+    color: var(--white);
     border: none;
     padding: 12px 30px;
     border-radius: 25px;
@@ -81,13 +99,13 @@
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(214, 51, 132, 0.3);
+    box-shadow: 0 4px 15px var(--accent-shadow);
 }
 
 .submit-btn:hover {
-    background: #ff4da6;
+    background: var(--accent-hover);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(214, 51, 132, 0.5);
+    box-shadow: 0 6px 20px var(--accent-shadow-hover);
 }
 
 .contact-info {
@@ -97,10 +115,10 @@
 }
 
 .info-card {
-    background: white;
+    background: var(--card-background);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px var(--shadow-light);
     transition: transform 0.3s ease;
     text-align: center;
 }
@@ -112,7 +130,7 @@
 .info-icon {
     width: 50px;
     height: 50px;
-    background: rgba(214, 51, 132, 0.1);
+    background: var(--accent-light);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -122,38 +140,38 @@
 }
 
 .info-card:hover .info-icon {
-    background: #D63384;
+    background: var(--accent-primary);
 }
 
 .info-icon i {
     font-size: 1.5rem;
-    color: #D63384;
+    color: var(--accent-primary);
     transition: all 0.3s ease;
 }
 
 .info-card:hover .info-icon i {
-    color: white;
+    color: var(--white);
 }
 
 .info-card h3 {
     font-size: 1.4rem;
-    color: #333;
+    color: var(--text-primary);
     margin-bottom: 10px;
 }
 
 .info-card p {
-    color: #666;
+    color: var(--text-secondary);
     margin: 0;
 }
 
 .info-card a {
-    color: #D63384;
+    color: var(--accent-primary);
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .info-card a:hover {
-    color: #ff4da6;
+    color: var(--accent-hover);
     text-decoration: underline;
 }
 
@@ -212,7 +230,7 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background: linear-gradient(to right, transparent, var(--shimmer), transparent);
     transform: rotate(30deg);
     animation: shimmerContact 3s infinite;
     pointer-events: none;

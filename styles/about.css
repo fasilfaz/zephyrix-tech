@@ -1,3 +1,18 @@
+:root {
+    --white: #fff;
+    --light-gray: #f8f9fa;
+    --black: #333;
+    --gray: #666;
+    --primary-pink: #D63384;
+    --gradient-light-pink: #FF90BC;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+    --shadow-darker: rgba(0, 0, 0, 0.08);
+    --shadow-darkest: rgba(0, 0, 0, 0.15);
+    --transparent-black: rgba(0, 0, 0, 0.9);
+    --semi-transparent-black: rgba(0, 0, 0, 0.7);
+    --transparent-white: rgba(255, 255, 255, 0.1);
+    --opaque-white: rgba(255, 255, 255, 0.9);
+}
 
 * {
     margin: 0;
@@ -7,8 +22,8 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #fff, #f8f9fa);
-    color: #333;
+    background: linear-gradient(to bottom, var(--white), var(--light-gray));
+    color: var(--black);
     line-height: 1.6;
 }
 
@@ -47,11 +62,11 @@ body {
 }
 
 .stat-card {
-    background: white;
+    background: var(--white);
     padding: 30px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px var(--shadow-color);
     transition: transform 0.3s ease;
 }
 
@@ -61,7 +76,7 @@ body {
 
 .stat-number {
     font-size: 2.5rem;
-    color: #D63384;
+    color: var(--primary-pink);
     margin-bottom: 10px;
 }
 
@@ -73,10 +88,10 @@ body {
 }
 
 .team-member {
-    background: white;
+    background: var(--white);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px var(--shadow-color);
     transition: transform 0.3s ease;
 }
 
@@ -102,7 +117,7 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    color: #D63384;
+    color: var(--primary-pink);
     margin-bottom: 20px;
 }
 
@@ -112,7 +127,7 @@ h3 {
 }
 
 p {
-    color: #666;
+    color: var(--gray);
     margin-bottom: 20px;
 }
 
@@ -124,11 +139,11 @@ p {
 }
 
 .value-card {
-    background: white;
+    background: var(--white);
     padding: 30px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px var(--shadow-color);
     transition: transform 0.3s ease;
 }
 
@@ -139,7 +154,7 @@ p {
 .value-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #FF90BC, #D63384);
+    background: linear-gradient(135deg, var(--gradient-light-pink), var(--primary-pink));
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -171,10 +186,10 @@ p {
 
 .member-card {
     position: relative;
-    background: white;
+    background: var(--white);
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px var(--shadow-darker);
     transition: transform 0.3s ease;
     height: 100%;
 }
@@ -191,11 +206,11 @@ p {
     left: 0;
     right: 0;
     background: linear-gradient(to top, 
-        rgba(0, 0, 0, 0.9) 0%,
-        rgba(0, 0, 0, 0.7) 50%,
+        var(--transparent-black) 0%,
+        var(--semi-transparent-black) 50%,
         rgba(0, 0, 0, 0) 100%);
     padding: 2rem 1.5rem;
-    color: white;
+    color: var(--white);
     transform: translateY(4rem);
     transition: transform 0.3s ease;
 }
@@ -204,13 +219,13 @@ p {
     margin: 0;
     font-size: 1.5rem;
     font-weight: 600;
-    color: white;
+    color: var(--white);
 }
 
 .member-details p {
     margin: 0.5rem 0 1rem;
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--opaque-white);
 }
 
 .social-icons {
@@ -222,26 +237,26 @@ p {
 }
 
 .social-icon {
-    color: white;
+    color: var(--white);
     transition: all 0.2s ease;
     padding: 0.5rem;
     border-radius: 0.5rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--transparent-white);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .social-icon:hover {
-    background: white;
-    color: #D63384;
+    background: var(--white);
+    color: var(--primary-pink);
     transform: translateY(-2px);
 }
 
 /* Hover effects */
 .member-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px var(--shadow-darkest);
 }
 
 .member-card:hover .member-details {

@@ -5,11 +5,27 @@
     font-family: Arial, sans-serif;
 }
 
+:root {
+    --background-start: #fff;
+    --background-end: #f8f9fa;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --card-background: white;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    --shadow-hover: rgba(214, 51, 132, 0.1);
+    --accent-primary: #D63384;
+    --accent-secondary: #FF90BC;
+    --accent-dark: #9F1239;
+    --badge-color: #0dcaf0;
+    --white: white;
+}
+
 body {
-    background: linear-gradient(to bottom, #fff, #f8f9fa);
-    color: #333;
+    background: linear-gradient(to bottom, var(--background-start), var(--background-end));
+    color: var(--text-primary);
     line-height: 1.6;
 }
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -24,10 +40,10 @@ body {
 }
 
 .product-card {
-    background: white;
+    background: var(--card-background);
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px var(--shadow-light);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -35,13 +51,13 @@ body {
 
 .product-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(214, 51, 132, 0.1);
+    box-shadow: 0 15px 40px var(--shadow-hover);
 }
 
 .product-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #FF90BC, #D63384);
+    background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -59,8 +75,8 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: #0dcaf0;
-    color: white;
+    background: var(--badge-color);
+    color: var(--white);
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -73,7 +89,7 @@ h1 {
 
 h2 {
     font-size: 1.8rem;
-    color: #D63384;
+    color: var(--accent-primary);
     margin-bottom: 15px;
 }
 
@@ -83,7 +99,7 @@ h3 {
 }
 
 p {
-    color: #666;
+    color: var(--text-secondary);
     margin-bottom: 20px;
 }
 
@@ -100,7 +116,7 @@ p {
 
 .features-list li::before {
     content: "•";
-    color: #D63384;
+    color: var(--accent-primary);
     position: absolute;
     left: 0;
     font-size: 1.2rem;
@@ -108,8 +124,8 @@ p {
 
 .cta-button {
     display: inline-block;
-    background: linear-gradient(135deg, #D63384, #9F1239);
-    color: white;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-dark));
+    color: var(--white);
     padding: 12px 30px;
     border-radius: 30px;
     text-decoration: none;

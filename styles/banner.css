@@ -1,21 +1,29 @@
+:root {
+    --primary-pink: #D63384;
+    --dark-pink: #9F1239;
+    --white: white;
+    --aliceblue: aliceblue;
+    --transparent-white: rgba(255, 255, 255, 0.1);
+}
+
 .banner {
-    background: linear-gradient(135deg, #D63384, #9F1239);
+    background: linear-gradient(135deg, var(--primary-pink), var(--dark-pink));
     padding: 120px 20px;
     text-align: center;
-    color: white;
+    color: var(--white);
     position: relative;
     overflow: hidden;
     margin-top: 43.8px;
 }
 
 .banner p {
-    color: aliceblue;
+    color: var(--aliceblue);
 }
 
 .circle-decoration {
     position: absolute;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--transparent-white);
     animation: float 6s ease-in-out infinite;
 }
 
