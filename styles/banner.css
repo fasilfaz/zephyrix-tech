@@ -1,6 +1,8 @@
 :root {
     --primary-pink: #207FAC;
-    --dark-pink: #9F1239;
+    --hover-pink: #1A6D95;
+    --light-pink: #5AB1D8;
+    --dark-pink: #155A7A;
     --white: white;
     --aliceblue: aliceblue;
     --transparent-white: rgba(255, 255, 255, 0.1);
@@ -59,9 +61,16 @@
 .circle-top {
     animation: floatAndRotate 6s ease-in-out infinite;
 }
+.banner-subtitle {
+    text-align: center;
+}
 
 @media (max-width: 768px) {
     .banner {
         padding: 80px 20px;
     }
+    /* .banner-subtitle {
+        text-align: start;
+    } */
 }
+

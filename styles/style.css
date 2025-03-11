@@ -1565,6 +1565,7 @@ html {
     color: var(--gray);
     font-size: 1.1rem;
     margin-top: 15px;
+    text-align: center;
 }
 
 .products-grid {
@@ -1720,6 +1721,10 @@ html {
     font-size: 1rem;
 }
 
+.tech-stack-subtitle {
+    text-align: center;
+}
+
 .product-btn {
     background: transparent;
     color: var(--primary-pink);
@@ -1756,6 +1761,9 @@ html {
     .products-grid {
         grid-template-columns: 1fr;
         padding: 10px;
+    }
+    .section-subtitle, .tech-stack-subtitle {
+        text-align: start;
     }
 
     .product-content {

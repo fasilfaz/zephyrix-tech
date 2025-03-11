@@ -4,8 +4,10 @@
     --black: #333;
     --gray: #666;
     --primary-pink: #207FAC;
-    --dark-pink: #9F1239;
-    --gradient-light-pink: #FF90BC;
+    --hover-pink: #1A6D95;
+    --light-pink: #5AB1D8;
+    --dark-pink: #155A7A;
+    --gradient-light-pink: #66C2E8;
     --shadow-color: rgba(0, 0, 0, 0.05);
     --hover-shadow-color: rgba(214, 51, 132, 0.1);
 }
