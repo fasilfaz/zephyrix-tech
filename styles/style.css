@@ -1,9 +1,9 @@
 :root {
-    --primary-pink: #D63384;
-    --hover-pink: #ff4da6;
-    --light-pink: #ff85c0;
-    --dark-pink: #9F1239;
-    --gradient-light-pink: #FF90BC;
+    --primary-pink: #207FAC;
+    --hover-pink: #1A6D95;
+    --light-pink: #5AB1D8;
+    --dark-pink: #155A7A;
+    --gradient-light-pink: #66C2E8;
     --black: #333;
     --gray: #666;
     --light-gray: #f8f9fa;
@@ -12,6 +12,7 @@
     --transparent-black: rgba(0, 0, 0, 0.4);
     --transparent-white: rgba(255, 255, 255, 0.1);
     --gold: #FFD700;
+        --gradient-light-blue-bg: linear-gradient(45deg, rgba(32, 127, 172, 0.1), rgba(26, 109, 149, 0.1));
 }
 
 body {
@@ -1430,7 +1431,7 @@ html {
 
 .floating-circle {
     position: absolute;
-    background: linear-gradient(45deg, rgba(214, 51, 132, 0.1), rgba(255, 77, 166, 0.1));
+    background: var(--gradient-light-blue-bg);
     border-radius: 50%;
     animation: floatAround 20s linear infinite;
 }
