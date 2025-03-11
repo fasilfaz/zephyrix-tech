@@ -15,14 +15,14 @@
 
 <body>
     <!-- Animated Background Elements -->
-    <div class="animated-background">
+    <!-- <div class="animated-background">
         <div class="floating-circle"></div>
         <div class="floating-circle"></div>
         <div class="floating-circle"></div>
         <div class="floating-circle"></div>
         <div class="floating-circle"></div>
-    </div>
-    <div class="particles-container"></div>
+    </div> -->
+    <!-- <div class="particles-container"></div> -->
     <header>
         <div class="logo"><span>Z</span>ephyrix <span>T</span>ech</div>
         <div class="menu-toggle" onclick="toggleMenu()">
@@ -40,7 +40,7 @@
             </ul>
         </nav>
         <nav class="mobile-nav">
-            <a href="index.html" class="nav-item active" data-page="index">
+            <a href="index.html" class="nav-item " data-page="index">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#D63384">
                     <path
                         d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2zm0 2.83L19.17 12h-1.67v8h-3v-6H9.5v6h-3v-8H4.83L12 4.83z" />
@@ -135,131 +135,100 @@
     </section>
     <section id="services" class="services-section">
         <div class="container">
-            <h2 class="text-center mb-5">Services we offer</h2>
-
-            <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators custom-indicators">
-                    <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row" style="padding: 20px;">
-                            <div class="col-md-4">
-                                <div class="service-card">
-                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
-                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                                    </svg>
-                                    <h4>Web Development</h4>
-                                    <p>A Website is an extension of yourself and we can help you to express it properly.
-                                        Your website is your number one marketing asset because we live in a digital
-                                        age.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="service-card">
-                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
-                                        <path
-                                            d="M12 2a10 10 0 0110 10c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z" />
-                                        <path d="M12 6v6l4 2" />
-                                    </svg>
-                                    <h4>Mobile App Development</h4>
-                                    <p>Transform your business idea into a powerful mobile application that reaches your
-                                        customers wherever they are.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="service-card">
-                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
-                                        <path d="M20 7h-9m9 4h-9m9 4h-9M7 7v10m0-10L4 8.5m3-1.5l3 1.5" />
-                                    </svg>
-                                    <h4>Software Testing</h4>
-                                    <p>Ensure your software meets the highest quality standards with our comprehensive
-                                        testing services.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row" style="padding: 20px;">
-                            <div class="col-md-4">
-                                <div class="service-card">
-                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
-                                        <path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M13 12H3" />
-                                    </svg>
-                                    <h4>UI/UX Design</h4>
-                                    <p>Create intuitive and engaging user experiences that keep your customers coming
-                                        back for more.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="service-card">
-                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
-                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                                    </svg>
-                                    <h4>Digital Marketing</h4>
-                                    <p>Boost your online presence with our comprehensive digital marketing solutions.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="service-card">
-                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
-                                        <path d="M4 6h16M4 12h16M4 18h16" />
-                                    </svg>
-                                    <h4>Cloud Services</h4>
-                                    <p>Leverage the power of cloud computing to scale your business efficiently.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row" style="padding: 20px;">
-                            <div class="col-md-4">
-                                <div class="service-card">
-                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
-                                        <path
-                                            d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                                    </svg>
-                                    <h4>AI & Machine Learning</h4>
-                                    <p>Implement cutting-edge AI solutions to automate processes and gain valuable
-                                        insights from your data.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="service-card">
-                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
-                                        <path
-                                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17" />
-                                    </svg>
-                                    <h4>DevOps Services</h4>
-                                    <p>Streamline your development and operations with our modern DevOps practices and
-                                        tools.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="service-card">
-                                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
-                                        <path
-                                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                                    </svg>
-                                    <h4>Cybersecurity</h4>
-                                    <p>Protect your digital assets with our comprehensive security solutions and best
-                                        practices.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+          <h2 class="text-center mb-5">Services we offer</h2>
+      
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon" style="background-color: #ffebee;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f44336" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <h4>Web Designing & Development</h4>
+              <p>A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.</p>
+              <a href="#" class="learn-more">Learn More</a>
             </div>
+      
+            <div class="service-card">
+              <div class="service-icon" style="background-color: #e3f2fd;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#2196f3" stroke-width="2">
+                  <path d="M12 2a10 10 0 0110 10c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z"/>
+                  <path d="M12 6v6l4 2"/>
+                </svg>
+              </div>
+              <h4>E-commerce Designing & Development</h4>
+              <p>Build a robust online store to showcase your products and reach customers globally with ease.</p>
+              <a href="#" class="learn-more">Learn More</a>
+            </div>
+      
+            <!-- <div class="service-card">
+              <div class="service-icon" style="background-color: #fff3e0;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#ff9800" stroke-width="2">
+                  <path d="M20 7h-9m9 4h-9m9 4h-9M7 7v10m0-10L4 8.5m3-1.5l3 1.5"/>
+                </svg>
+              </div>
+              <h4>Social Media Marketing</h4>
+              <p>Enhance your brand visibility with targeted social media campaigns and engaging content.</p>
+              <a href="#" class="learn-more">Learn More</a>
+            </div> -->
+      
+            <!-- <div class="service-card">
+              <div class="service-icon" style="background-color: #f8bbd0;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#e91e63" stroke-width="2">
+                  <path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M13 12H3"/>
+                </svg>
+              </div>
+              <h4>Branding</h4>
+              <p>Create a strong brand identity that resonates with your audience and stands out in the market.</p>
+              <a href="#" class="learn-more">Learn More</a>
+            </div> -->
+      
+            <div class="service-card">
+              <div class="service-icon" style="background-color: #e8f5e9;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2">
+                  <path d="M9 5l-6 6 6 6m6-12l6 6-6 6"/>
+                </svg>
+              </div>
+              <h4>Mobile Application Development</h4>
+              <p>Transform your business idea into a powerful mobile app that reaches your customers anywhere.</p>
+              <a href="#" class="learn-more">Learn More</a>
+            </div>
+      
+            <div class="service-card">
+              <div class="service-icon" style="background-color: #eceff1;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#607d8b" stroke-width="2">
+                  <path d="M12 2v20M6 10l6-6 6 6M6 14l6 6 6-6"/>
+                </svg>
+              </div>
+              <h4>Software Development</h4>
+              <p>Custom software solutions tailored to streamline your business processes and improve efficiency.</p>
+              <a href="#" class="learn-more">Learn More</a>
+            </div>
+      
+            <div class="service-card">
+              <div class="service-icon" style="background-color: #ffe0b2;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#ff5722" stroke-width="2">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                </svg>
+              </div>
+              <h4>Digital Marketing</h4>
+              <p>Boost your online presence with our expert digital marketing strategies and tools.</p>
+              <a href="#" class="learn-more">Learn More</a>
+            </div>
+      
+            <!-- <div class="service-card">
+              <div class="service-icon" style="background-color: #e0f7fa;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00bcd4" stroke-width="2">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-13h-2v6h2v-2h2v-2h-2V7z"/>
+                </svg>
+              </div>
+              <h4>SEO Services</h4>
+              <p>Improve your search engine rankings with our optimized SEO strategies and techniques.</p>
+              <a href="#" class="learn-more">Learn More</a>
+            </div> -->
+          </div>
         </div>
-    </section>
+      </section>
 
     <!-- Products Section -->
     <section id="products" class="products-section">
@@ -514,7 +483,9 @@
             </button>
         </div>
     </section> -->
-    <section class="testimonials-section">
+
+
+    <!-- <section class="testimonials-section">
         <div class="container text-center">
             <h2 class="section-title">
                 Why customers love
@@ -586,7 +557,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+
+
     <section id="case-studies"  class="case-studies">
         <div class="container">
             <div class="case-studies-header">
@@ -990,7 +964,9 @@
             </div>
         </div>
     </section>
-    <section class="featured-resources">
+
+
+    <!-- <section class="featured-resources">
         <div class="container">
             <div class="resources-header">
                 <h2>Featured Resources</h2>
@@ -998,7 +974,6 @@
             </div>
 
             <div class="resources-grid">
-                <!-- Resource Card 1 -->
                 <div class="resource-card">
                     <div class="resource-image" style="background-image: url('/api/placeholder/400/320')">
                     </div>
@@ -1018,7 +993,6 @@
                     </div>
                 </div>
 
-                <!-- Resource Card 2 -->
                 <div class="resource-card">
                     <div class="resource-image" style="background-image: url('/api/placeholder/400/320')">
                     </div>
@@ -1038,7 +1012,6 @@
                     </div>
                 </div>
 
-                <!-- Resource Card 3 -->
                 <div class="resource-card">
                     <div class="resource-image" style="background-image: url('/api/placeholder/400/320')">
                     </div>
@@ -1059,7 +1032,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <section id="contact" class="contact-us">
         <div class="container">
           <div class="row">
