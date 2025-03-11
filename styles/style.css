@@ -2510,58 +2510,6 @@ html {
     }
 }
 
-.footer {
-    background-color: var(--black);
-    color: var(--white);
-    padding: 20px 0;
-    position: relative;
-    z-index: 1;
-}
-
-.footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.footer .col-md-4 {
-    flex-basis: 33.33%;
-}
-
-.footer h4 {
-    margin-top: 0;
-}
-
-.footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer li {
-    margin-bottom: 10px;
-}
-
-.footer a {
-    color: var(--white);
-    text-decoration: none;
-}
-
-.footer a:hover {
-    color: #ccc;
-}
-
-.copyright {
-    background-color: #444;
-    color: var(--white);
-    padding: 10px 0;
-    text-align: center;
-}
 
 
 .about-section {
@@ -2818,114 +2766,6 @@ html {
     }
 }
 
-.footer {
-    background: linear-gradient(135deg, #1a1a1a 0%, var(--black) 100%);
-    color: var(--white);
-    padding: 60px 0 0;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.footer-wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23fff' fill-opacity='1' d='M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,197.3C672,213,768,235,864,229.3C960,224,1056,192,1152,181.3C1248,171,1344,181,1392,186.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'%3E%3C/path%3E%3C/svg%3E");
-    background-size: cover;
-    z-index: -1;
-    transform: translateY(-50%);
-}
-
-.footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.footer .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
-    position: relative;
-    z-index: 2;
-}
-
-.footer .col-md-4 {
-    flex: 1;
-    min-width: 250px;
-    margin-bottom: 40px;
-    transition: transform 0.3s ease;
-}
-
-.footer .col-md-4:hover {
-    transform: translateY(-5px);
-}
-
-.footer h4 {
-    margin: 0 0 20px;
-    font-size: 1.8rem;
-    font-weight: 600;
-    position: relative;
-    color: var(--hover-pink);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.footer h4::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background: linear-gradient(to right, var(--primary-pink), var(--light-pink));
-    animation: gradientBG 3s ease infinite;
-}
-
-.footer p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #ddd;
-}
-
-.footer a {
-    color: var(--light-pink);
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.footer a:hover {
-    color: var(--white);
-    text-shadow: 0 0 10px rgba(255, 77, 166, 0.5);
-}
-
-.footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer li {
-    margin-bottom: 15px;
-    position: relative;
-    padding-left: 20px;
-}
-
-.footer li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--primary-pink);
-    transition: transform 0.3s ease;
-}
-
-.footer li:hover::before {
-    transform: translateX(5px);
-}
 
 /* Newsletter Styles */
 .newsletter {
@@ -2992,7 +2832,7 @@ html {
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
-    transition: all 0.3s ease;
+    /* transition: all 0.3s ease; */
 }
 
 .social-icon:hover {
@@ -3041,21 +2881,6 @@ html {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .footer {
-        padding: 40px 0 0;
-    }
-
-    .footer .row {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer .col-md-4 {
-        width: 100%;
-        max-width: 400px;
-        margin-bottom: 30px;
-    }
 
     .social-links {
         justify-content: center;
@@ -3068,45 +2893,9 @@ html {
     .newsletter input {
         margin-bottom: 10px;
     }
-
-    .footer {
-        margin-bottom: 58px;
-    }
 }
 
-@media (max-width: 480px) {
-    .footer h4 {
-        font-size: 1.5rem;
-    }
 
-    .footer p,
-    .footer li {
-        font-size: 0.9rem;
-    }
-
-    .social-icon {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-    }
-
-    .copyright {
-        font-size: 0.8rem;
-    }
-}
-
-/* Add floating animation to social icons */
-.social-icon {
-    animation: float 3s ease-in-out infinite;
-}
-
-.social-icon:nth-child(2) {
-    animation-delay: 0.5s;
-}
-
-.social-icon:nth-child(3) {
-    animation-delay: 1s;
-}
 
 
 /* Overlay Menu Styles (continued from previous cutoff) */
@@ -3402,3 +3191,137 @@ body {
     z-index: 40;
 }
 
+.footer {
+    background-color: #1a1a1a; /* Dark background matching the image */
+    color: #ffffff; /* White text */
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer .col-md-4 {
+    flex-basis: 33.33%;
+    padding: 0 15px;
+}
+
+.footer h4 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: var(--light-pink); /* Reddish tone inspired by the Continuity logo */
+}
+
+.footer p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer li {
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #cccccc;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px; /* Spacing between social icons like in the image */
+    justify-content: start; /* Centered layout similar to the image */
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #d32f2f; /* Hover color to match the logo */
+}
+
+.copyright {
+    background-color: #333333; /* Slightly lighter dark shade for contrast, matching the image */
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+
+.copyright a {
+    color: #cccccc;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.copyright a:hover {
+    color: #ffffff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 0;
+        margin-bottom: 4rem;
+    }
+
+    .footer .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer .col-md-4 {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 30px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer h4 {
+        font-size: 1.5rem;
+    }
+
+    .footer p,
+    .footer li {
+        font-size: 0.9rem;
+    }
+
+    .social-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+
+    .copyright {
+        font-size: 0.7rem;
+    }
+}
