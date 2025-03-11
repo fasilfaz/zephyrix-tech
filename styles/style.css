@@ -3375,6 +3375,9 @@ body {
     .overlay-menu-links {
         gap: 15px;
     }
+    /* .contact-btn {
+        display: flex;
+    } */
 }
 
 @media (max-width: 480px) {
@@ -3386,3 +3389,15 @@ body {
         gap: 10px;
     }
 }
+
+.carousel-item > div > div {
+    
+    position: relative;
+    z-index: 40;
+}
+
+.team-member{
+    position: relative;
+    z-index: 40;
+}
+
