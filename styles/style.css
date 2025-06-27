@@ -50,6 +50,16 @@ header nav ul {
     font-size: 1.5em;
     font-weight: bold;
 }
+.logoimage {
+    display: inline-block; /* or block if you want it on its own line */
+    width: auto; /* or specify a width */
+    height: auto; /* or specify a height */
+}
+
+.logoimage img {
+    width: 50px;  /* or whatever size you want */
+    height: auto;  /* maintain aspect ratio */
+}
 
 .logo span {
     color: var(--primary-pink);
@@ -557,6 +567,31 @@ header nav ul {
     border-color: var(--primary-pink);
   }
   
+  .service-more {
+    margin-left: 45%;
+    margin-top: 30px;
+    display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: #207FAC;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius:50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.service-more:hover {
+  background-color: #1B6A8F; /* Darker shade of #207FAC */
+  transform: scale(1.05);
+  color: #fff;
+}
+
+.service-more:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary-pink);
+}
+
   @media (max-width: 768px) {
     .services-grid {
       grid-template-columns: 1fr;
