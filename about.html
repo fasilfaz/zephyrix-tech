@@ -306,6 +306,7 @@
                 body.classList.add('overlay-active');
             }
         }
+
         document.querySelectorAll('.overlay-menu-item').forEach(link => {
             link.addEventListener('click', () => {
                 const overlayMenu = document.querySelector('.overlay-menu');
@@ -314,6 +315,7 @@
                 body.classList.remove('overlay-active');
             });
         });
+
         document.addEventListener('click', function (event) {
             const overlayMenu = document.querySelector('.overlay-menu');
             const overlayContent = document.querySelector('.overlay-menu-content');
@@ -325,21 +327,19 @@
                 }
             }
         });
+
         function toggleMenu() {
             const mobileNav = document.querySelector('.mobile-nav');
             mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
         }
-        // Intersection Observer for fade-in animations
+
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('.fade-in-section');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                    }
-                });
-            }, { threshold: 0.2 });
-            sections.forEach(section => observer.observe(section));
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.classList.add('is-visible');
+                }, index * 800);
+            });
         });
     </script>
 </body>
