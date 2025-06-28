@@ -51,14 +51,25 @@ header nav ul {
     font-weight: bold;
 }
 .logoimage {
-    display: inline-block; /* or block if you want it on its own line */
-    width: auto; /* or specify a width */
-    height: auto; /* or specify a height */
+    display: flex;
+    width: auto; 
+    height: auto; 
 }
 
 .logoimage img {
-    width: 50px;  /* or whatever size you want */
-    height: auto;  /* maintain aspect ratio */
+    width: 85px;  
+    height: auto;  
+}
+
+/* ------------------- */
+.logoimages img {
+    width: 60px;  
+    height: auto; 
+}
+.logoimages {
+    display: flex; 
+    width: auto; 
+    height: auto;
 }
 
 .logo span {
